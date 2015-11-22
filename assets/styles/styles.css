@@ -99,6 +99,10 @@ p.description {
 }
 
 hr {
-  background: linear-gradient(90deg, rgba(0,0,0,0), #333333, rgba(0,0,0,0));
+  background: linear-gradient(90deg, rgba(0,0,0,0), #666666, rgba(0,0,0,0));
   border-color: rgba(0,0,0,0);
+}
+
+p#last_description {
+  padding-bottom: 5px;
 }
