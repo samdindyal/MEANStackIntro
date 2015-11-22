@@ -1,20 +1,21 @@
 var app = angular.module('app', []);
 app.controller('WallCtrl', function ($scope, MessagesSvc) {
 
-  $scope.addPost = function () {
+  $scope.writeToWall = function () {
     if ($scope.postBody) {
       MessagesSvc.create({
-        username: $scope.name,
+        name: $scope.username,
         body: $scope.postBody
-      }).success(function(post){
-        $scope.posts.unshift(post);
+      }).success(function(message){
+        $scope.messages.unshift(message);
         $scope.postBody = null;
+        $scope.username = null;
       });
     }
   }
 
-  MessagesSvc.fetch().success(function (posts){
-    $scope.posts = posts;
+  MessagesSvc.fetch().success(function (messages){
+    $scope.messages = messages;
   });
 });
 
@@ -23,7 +24,7 @@ app.service('MessagesSvc', function($http) {
     return $http.get('/api/messages');
   }
 
-  this.create = function (post) {
-    return $http.post('/api/messages', post);
+  this.create = function (message) {
+    return $http.post('/api/messages', message);
   }
 });
