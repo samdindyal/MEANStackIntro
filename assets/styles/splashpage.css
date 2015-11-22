@@ -21,7 +21,7 @@ div.splashpage {
 
   position: relative;
   top:50%;
-  transform: translateY(-50%);
+  transform: translateY(-45%);
 }
 
 div.title > h1, h2 {
@@ -44,6 +44,19 @@ img.mean_logo {
   padding-top: 20px;
   display: inline;
   width: 90%;
+  max-width: 700px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  transition: 0.5s;
+}
+
+img.mean_logo:hover {
+  background-color: rgba(204, 188, 241, 0.75);
+  border-color: #c9e5ff;
+  border-radius: 10px;
+}
+
+img.mean_logo:active {
+  background-color: #c9e5ff;
 }
 
 div.names > h3 {
@@ -54,8 +67,4 @@ div.names > h3 {
 div.course_info > h4 {
   color: #666666;
   font-weight: 300;
-}
-
-span.course_code {
-
 }
