@@ -3,5 +3,9 @@
   "dependencies": {
     "body-parser": "^1.14.1",
     "express": "^4.13.3"
+  },
+  "engines": {
+    "node": "5.1.0",
+  "npm": "3.x.x"
   }
 }
