@@ -2,10 +2,11 @@
   "name": "CPS530-MEANSTACK",
   "dependencies": {
     "body-parser": "^1.14.1",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "mongoose": "^4.2.7"
   },
   "engines": {
     "node": "5.1.0",
-  "npm": "3.x.x"
+    "npm": "3.x.x"
   }
 }
