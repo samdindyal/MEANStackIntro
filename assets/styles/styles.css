@@ -93,3 +93,12 @@ img.logo:hover {
 img.logo:active {
   background-color: #c9e5ff;
 }
+
+p.description {
+  padding-bottom: 25px;
+}
+
+hr {
+  background: linear-gradient(90deg, rgba(0,0,0,0), #333333, rgba(0,0,0,0));
+  border-color: rgba(0,0,0,0);
+}
