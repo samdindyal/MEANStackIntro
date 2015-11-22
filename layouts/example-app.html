@@ -30,8 +30,8 @@
       <h1>Write on our wall!</h1>
         <form role="form">
           <div class="form-group">
-            <input ng-model="username" class="form-control" placeholder="Your Name"/>
-            <textarea ng-model="postBody" class="form-control" placeholder="What's on your mind (That's G Rated)?"></textarea>
+            <input ng-model="username" class="form-control" placeholder="Your Name" maxlength="20"/>
+            <textarea ng-model="postBody" class="form-control" placeholder="What's on your mind (That's G Rated)? (120 Characters Max)" maxlength="120"></textarea>
               <button ng-click="writeToWall()" id="add_post" class="btn btn-default">Add Post</button>
         </div>
         </form>
