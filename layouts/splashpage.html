@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CPS510 Term Project - The MEAN Stack</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" title="Bootstrap" charset="utf-8">
+    <link rel="stylesheet" href="styles/splashpage.css" charset="utf-8">
+  </head>
+  <body ng-app='app'>
+    <div ng-controller="SplashCtrl" class="splashpage">
+      <div class="title">
+        <h2>An introduction to</h2>
+        <h1>The MEAN Stack</h1>
+      </div>
+      <img class="mean_logo" src="img/mean.png" alt="MEAN Stack Logo" />
+      <div class="names">
+        <h3 ng-repeat="author in authors">{{ author.name }}</h3>
+      </div>
+      <div class="course_info">
+        <h4>Web Systems Development <span class="course_code">(CPS530)</span></h4>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/app.js" charset="utf-8"></script>
+  </body>
+</html>

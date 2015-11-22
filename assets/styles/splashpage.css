@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+body, html {
+  height: 100%;
+}
+
+body {
+  color: #333333;
+  text-align: center;
+  background-color: #c9e5ff;
+  background: linear-gradient(#c9e5ff, #eee7ff);
+  font-family: "Open Sans";
+}
+
+div {
+  padding: 10px;
+}
+
+div.splashpage {
+  height: 75%;
+
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+div.title > h1, h2 {
+  line-height: 0.6em;
+}
+
+div.title > h1 {
+  text-indent: 125px;
+  font-size: 300%;
+}
+
+div.title > h2 {
+  text-indent: -125px;
+  color: #666666;
+  font-weight: 300;
+}
+
+img.mean_logo {
+  padding: 15px;
+  padding-top: 20px;
+  display: inline;
+  width: 90%;
+}
+
+div.names > h3 {
+  line-height: 0.4em;
+  color: #444444;
+}
+
+div.course_info > h4 {
+  color: #666666;
+  font-weight: 300;
+}
+
+span.course_code {
+
+}
