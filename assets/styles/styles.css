@@ -63,7 +63,7 @@ ul.dropdown-menu > li > a.current:hover {
   color: #719bc3;
 }
 
-div.container {
+div.container:not(.example_app) {
 
   padding: 15px;
   background-color: rgba(255, 255, 255, 0.25);
@@ -105,4 +105,30 @@ hr {
 
 p#last_description {
   padding-bottom: 5px;
+}
+
+textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 5px auto;
+}
+
+#add_post.btn.btn-default {
+  background-color: rgba(199, 179, 247, 0.7);
+  border-radius: 5px;
+  border-color: rgba(0,0,0,0);
+  transition: 0.5s;
+}
+
+#add_post.btn.btn-default:hover {
+  background-color: rgba(137, 193, 246, 0.7);
+}
+
+#add_post.btn.btn-default:active {
+  background-color: rgba(179, 186, 247, 0.7);
+  box-shadow: 0px 0px 15px rgba(199, 179, 247, 0.7);
 }

@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body ng-app='app'>
     <header>
       <div class="btn-group">
         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
@@ -26,8 +26,25 @@
         </ul>
       </div>
     </header>
-    <div class="container">
-
+    <div class="container example_app" ng-controller='WallCtrl'>
+      <div class="wall">
+        <li ng-repeat="post in posts | orderBy: '-date'" class="list-group-item"></li>
+        <ul class="list-group">
+          <li ng-repeat="message in messages | orderBy: '-date'" class="list-group-item">
+            <b>{{ message.name }}</b>: "{{ message.body }}" <span class="time">{{ @message.date }}</span>
+          </li>
+        </ul>
+      </div>
+      <h1>Write on our wall!</h1>
+        <form role="form">
+          <div class="form-group">
+            <input ng-model="postBody" class="form-control" placeholder="Your Name"/>
+            <textarea ng-model="name" class="form-control" placeholder="What's on your mind (That's G Rated)?"></textarea>
+              <button ng-click="writeToWall()" id="add_post" class="btn btn-default">Add Post</button>
+        </div>
+        </form>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/app.js" charset="utf-8"></script>
   </body>
 </html>
