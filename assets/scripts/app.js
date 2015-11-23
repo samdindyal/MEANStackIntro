@@ -3,6 +3,8 @@ var socket = io();
 
 app.controller('WallCtrl', function ($scope, MessagesSvc) {
 
+  $scope.connectedUsers = 1 + " user connected.";
+
   $scope.writeToWall = function () {
     if ($scope.postBody) {
       MessagesSvc.create({
