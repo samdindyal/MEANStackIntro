@@ -187,7 +187,7 @@ span#connected_users {
 
 @media screen and (max-device-width:700px) {
   body {
-      font-size: 4vw;
+      font-size: 8vw;
       background: linear-gradient(#c9e5ff, #eee7ff, #c9e5ff);
       background-repeat: repeat-y;
   }
@@ -208,9 +208,9 @@ span#connected_users {
 
   div.wall {
     box-shadow: none;
-    position: inline;
+    position: relative;
 
-    top: 50px
+    top: 0px
     bottom: 0px;
 
   }
