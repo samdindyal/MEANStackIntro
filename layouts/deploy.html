@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" title="Bootstrap" charset="utf-8">
     <link rel="stylesheet" href="/styles/styles.css" charset="utf-8">
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script>
   </head>
   <body>
     <header>
@@ -28,7 +26,73 @@
       </div>
     </header>
     <div class="container">
-
+      <div class="intro deploy">
+        <h2>Prepare Web App for Heroku</h2>
+        <p>
+          Before we add our web app to Heroku, we need to add something called a <code>Procfile</code>.
+          The <code>Procfile</code> tells Heroku which source file it needs to run to launch your app.
+        </p>
+        <p>
+          Fire up your text editor and enter the following and save the file as <code>Procfile</code> in your project's root directory:
+          <pre class="prettyprint lang-shell">
+  web: node server.js</pre>
+        </p>
+        <p>
+        </p>
+      </div>
+      <div class="setuptoolbelt deploy">
+        <h2>Setting up Heroku Toolbelt</h2>
+        <p>
+          For the sake of simplicity, please stay in the root directory of your project. Now that you've got your web app, we can deploy it to Heroku. The first thing we need is the <a href="https://toolbelt.heroku.com">Heroku Toolbelt</a>.
+        </p>
+        <p>
+          Now that you've got Heroku Toolbelt installed, you'll need a Heroku account. You can sign up below:
+        </p>
+        <a href="https://signup.heroku.com">https://signup.heroku.com</a><br><br>
+        <p>
+          Once Heroku Toolbelt has been installed, from the root directory of your project, run the following:
+          <pre class="prettyprint lang-shell">
+  $ heroku login</pre>
+          You will then be prompted to log into your Heroku account. Enter your credentials to continue.
+        </p>
+      </div>
+      <div class="deploy createWebApp">
+        <h2>Creating Your Heroku Web App</h2>
+        <p>
+          Before turning our web app into a Heroku app, we need to initialize our project folder as a git repository.
+          This can be done with the command below:
+          <pre class="prettyprint lang-shell">
+  $ git init</pre>
+        </p>
+        <p>
+           Once our git repository has been successfully initialized, use the command below to create a new Heroku web app:
+        </p>
+        <pre class="prettyprint lang-shell">
+  $ heroku create &lt;appname&gt;</pre>
+        Where you replace <code>appname</code> with the name of your app.
+        The <code>appname</code> value will be used as a part of your web app's url.
+        Your web app's url will be as follows:<br><br>
+        <a href="#">http://&lt;appname&gt;.herokuapp.com</a><br>
+      </div>
+      <div class="deploy deploytoHeroku">
+        <h2>Deploying to Heroku</h2>
+        <p>
+          Now that we're all set up, we can add our web app to Heroku. Please execute the following, line by line:
+          <pre class="prettyprint lang-shell">
+  $ git add --all
+  $ git commit -m "First commit"
+  $ git push heroku master</pre>
+        </p>
+      </div>
+      <div class="deploy viewSite">
+        <h2>View Your App Live!</h2>
+        Once you have deployed your site to Heroku, you can view it by manually typing in the URL into your browser or, from your project's root directory, you can run the following:
+        <pre class="prettyprint lang-shell">
+  $ heroku open</pre>
+      </div>
     </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
   </body>
 </html>

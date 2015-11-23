@@ -219,7 +219,7 @@ pre {
   text-align: left;
 }
 
-div.simpleapp {
+div.simpleapp, div.deploy {
   padding-bottom: 15px;
 }
 
