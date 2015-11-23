@@ -1,5 +1,5 @@
 var app = angular.module('app', []);
-var socket = io();
+var socket = io(window.location.hostname);
 
 app.controller('WallCtrl', function ($scope, MessagesSvc) {
 
