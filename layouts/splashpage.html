@@ -14,7 +14,7 @@
       </div>
       <a href="introduction/"><img class="mean_logo" src="img/mean.png" alt="MEAN Stack Logo" /></a>
       <div class="names">
-        <h3 ng-repeat="author in authors">{{ author.name }}</h3>
+        <a ng-repeat="author in authors" href="{{ author.profile }}"><h3>{{ author.name }}</h3></a>
       </div>
       <div class="course_info">
         <h4>Web Systems Development (CPS530)</h4>

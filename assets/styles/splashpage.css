@@ -57,9 +57,18 @@ img.mean_logo:active {
   background-color: #c9e5ff;
 }
 
-div.names > h3 {
+div.names > a > h3 {
   line-height: 0.4em;
   color: #444444;
+  transition: 0.5s;
+}
+
+div.names > a > h3:hover {
+  color: #9469ff;
+}
+
+div.names > a {
+  text-decoration: none;
 }
 
 div.course_info > h4 {
