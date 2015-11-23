@@ -43,6 +43,15 @@ button.btn.btn-default.dropdown-toggle:active
   box-shadow: none;
 }
 
+a {
+  transition: 0.5s;
+  color: #555555;
+}
+
+a:hover {
+  color: #7871c3;
+  text-decoration: none;
+}
 
 ul.dropdown-menu {
   width: auto;
