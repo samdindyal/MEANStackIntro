@@ -1,4 +1,6 @@
 var app = angular.module('app', []);
+var socket = io();
+
 app.controller('WallCtrl', function ($scope, MessagesSvc) {
 
   $scope.writeToWall = function () {
@@ -8,11 +10,20 @@ app.controller('WallCtrl', function ($scope, MessagesSvc) {
         body: $scope.postBody
       }).success(function(message){
         $scope.messages.unshift(message);
+
+        socket.emit('new message', $scope.username + ": " + $scope.postBody);
+
         $scope.postBody = null;
         $scope.username = null;
       });
     }
   }
+
+  socket.on('refresh', function(msg){
+      MessagesSvc.fetch().success(function (messages){
+        $scope.messages = messages;
+      });
+   });
 
   MessagesSvc.fetch().success(function (messages){
     $scope.messages = messages;
