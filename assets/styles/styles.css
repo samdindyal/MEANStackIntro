@@ -201,11 +201,16 @@ span#connected_users {
     width: 100%;
   }
 
+  header {
+    position: relative;
+    height: auto;
+  }
+
   div.wall {
     box-shadow: none;
     position: inline;
 
-    margin-top: 25px;
+    top: 50px
     bottom: 0px;
 
   }
