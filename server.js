@@ -19,10 +19,12 @@ var io = require('socket.io').listen(server);
 
 io.on('connection', function(socket){
   connectedUsers++;
-  console.log('a user connected ' + connectedUsers);
+  io.emit('refresh usercount', connectedUsers);
+  console.log('a user connected');
   socket.on('disconnect', function(){
     connectedUsers--;
-    console.log('user disconnected ' + connectedUsers);
+    io.emit('refresh usercount', connectedUsers);
+    console.log('user disconnected');
   });
 
   socket.on('new message', function(msg){
