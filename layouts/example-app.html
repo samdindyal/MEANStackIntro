@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script>
   </head>
-  <body ng-app='app'>
+  <body ng-app='app' ng-controller="Ctrl">
     <header>
       <div class="btn-group">
         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
@@ -26,7 +26,7 @@
         </ul>
       </div>
     </header>
-    <div class="container example_app" ng-controller='WallCtrl'>
+    <div class="container example_app">
       <h1>Write on our wall!</h1>
         <form role="form">
           <div class="form-group">
