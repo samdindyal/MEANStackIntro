@@ -21,6 +21,16 @@ header {
   border: none;
 }
 
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.7));
+  padding: 10px;
+  padding-top: 75px;
+  border: none;
+}
+
 div.btn-group > button.btn.btn-default.dropdown-toggle {
   background-color: rgba(0,0,0,0);
   border: none;

@@ -14,12 +14,13 @@ app.controller('WallCtrl', function ($scope, MessagesSvc) {
         socket.emit('new message', $scope.username + ": " + $scope.postBody);
 
         $scope.postBody = null;
-        $scope.username = null;
       });
     }
   }
 
-  socket.on('refresh', function(msg){
+  socket.on('refresh', function(connectedUsers){
+      $scope.connectedUsers = connectedUsers;
+      console.log(connectedUsers);
       MessagesSvc.fetch().success(function (messages){
         $scope.messages = messages;
       });
