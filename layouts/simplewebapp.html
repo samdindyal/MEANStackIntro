@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" title="Bootstrap" charset="utf-8">
     <link rel="stylesheet" href="/styles/styles.css" charset="utf-8">
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script>
   </head>
   <body>
     <header class="long">
@@ -28,7 +26,119 @@
       </div>
     </header>
     <div class="container">
+      <div class="simpleapp initializing">
+        <h2>Initializing your App</h2>
+        <p>
+          Now that you've got everything installed, let's make your first MEAN Stack application.
+          The first thing we need to do is set up our project folder. Once we have created it, we initialize our app with:
+          <pre class="prettyprint lang-shell">
+  $ npm init --yes</pre>
+        </p>
+        The previous command initializes our application with a <code>json</code> file called <code>package.json</code> in the root directory of our project. This file is responsible for keeping track of the project information as well as its dependencies.
+      </div>
+      <div class="simpleapp installing-dependencies">
+        <h2>Installing Dependencies</h2>
+        <p>
+          For this app, we'll only need one dependency: <code>express.js</code> There are two ways to install this; we can install it globally or locally or our project.
+          For this case, we will install it locally for our project because we will need it when we deploy it to Heroku.
+        </p>
+        <p>
+          The command for installing <code>express</code> locally is as follows:<br>
+          <pre class="prettyprint lang-shell">
+  $ npm install --save express</pre>
+        </p>
+        <p>
+          After express has been installed, the dependency will be added to your <code>package.json</code> file.
+          <pre class="prettyprint lang-json">
+   "dependencies": {
+      "express": "^4.13.3"
+    }</pre>
+        </p>
+      </div>
+      <div class="simpleapp create">
+        <h2>Creating a Page</h2>
+        <p>
+          In order to create a website, we'll need a page first.
+        </p>
+        <xmp class="prettyprint" id="htmlXmp">
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta charset="utf-8">
+            <title>Hello World</title>
+            <link rel="stylesheet" href="styles.css" charset="utf-8">
+          </head>
+          <body>
+            <h1>Hello World!</h1>
+          </body>
+        </html>
+        </xmp>
+        <p>
+          Once that's done, save it as <code>layouts/page.html</code> relative to your project's root directory.
+        </p>
+      </div>
+      <div class="simpleapp serve">
+        <h2>Serving your Page</h2>
+        <p>
+          Now that we have a page to serve, let's serve it. Create a file called <code>server.js</code> in the root directory of your project folder and add the following:
+        </p>
+        <pre class="prettyprint lang-js">
+    var express = require('express');
+    var app = express();
 
+    app.get('/', function(req, res){
+      res.sendFile(__dirname + '/layouts/page.html');
+    });
+
+    app.listen(3000, function() {
+      console.log('Listening on port: 3000');
+    });
+</pre>
+        <p>
+          With this written we can now access the page we just creating by running <code>server.js</code>:
+          <pre class="prettyprint lang-shell">
+    $ node server.js</pre>
+        </p>
+        <p>
+          With this running, navigate to <code><a href="http://localhost:3000">http://localhost:3000</a></code> in your browser and you will see the page you just created.
+        </p>
+      </div>
+      <div class="Serving Static Assets">
+        <h2>Serving Static Assets</h2>
+        <p>
+          You may have noticed that we included a stylesheet that we didn't use yet. When running your website with <code>Node.js</code> and <code>Express.js</code>, you need to selectively and statically serve what you need. In order to do that, we are going to serve a folder containing all of our static assets.
+        </p>
+        <p>
+          The first step we need to take from here is to create a folder, <code>assets</code> in the root directory of our project folder. Once we've done that, we need to create <code>assets/styles.css</code>.
+        </p>
+        <p>
+          Create the following style sheet and save it in <code>assets/styles.css</code>
+        </p>
+        <pre class="prettyprint lang-css">
+  body, html {
+    height: 100%;
+  }
+
+  body {
+    background: linear-gradient(#c9e5ff, #eee7ff);
+  }</pre>
+
+      <p>
+        Now that we've got all the files we need, we just need to serve the <code>assets</code> folder as a static asset. We can do that by adding the following into <code>server.js</code>:
+      </p>
+      <pre class="prettyprint lang-js">
+app.use(express.static(__dirname + '/assets'));</pre>
+      <p>
+        Now that that's done, restart your node server and try to access your page again from <code><a href="http://localhost:3000">http://localhost:3000</a></code>.
+      </p>
+      <p>
+        If you see your styled page, congratulations! You have just created your first MEAN Stack Web App.
+      </p>
+      </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
   </body>
 </html>
