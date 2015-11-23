@@ -17,8 +17,8 @@ router.get('/setup', function(req, res) {
   res.sendfile('layouts/setup.html');
 });
 
-router.get('/simplewebapp', function(req, res) {
-  res.sendfile('layouts/simplewebapp.html');
+router.get('/helloworld', function(req, res) {
+  res.sendfile('layouts/helloworld.html');
 });
 
 router.get('/deploy', function(req, res) {
