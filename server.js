@@ -1,6 +1,8 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 
+var connectedUsers = 0;
+
 var port = process.env.PORT || 3000;
 
 var app = express();
@@ -16,12 +18,14 @@ var server = app.listen(port, function() {
 var io = require('socket.io').listen(server);
 
 io.on('connection', function(socket){
-  console.log('a user connected');
+  connectedUsers++;
+  console.log('a user connected ' + connectedUsers);
   socket.on('disconnect', function(){
-    console.log('user disconnected');
+    connectedUsers--;
+    console.log('user disconnected ' + connectedUsers);
   });
 
   socket.on('new message', function(msg){
-    io.emit('refresh', msg);
+    io.emit('refresh', connectedUsers);
   });
 });
