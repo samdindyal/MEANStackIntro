@@ -221,10 +221,8 @@ span#connected_users {
   div.wall {
     box-shadow: none;
     position: relative;
-    width: 100%;
-
-    top: 0px
-    bottom: 0px;
-
+    overflow: auto;
+    margin: auto;
+    top: 0px; bottom: 0px; left: 0px; right: 0px;
   }
 }
