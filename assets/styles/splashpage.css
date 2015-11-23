@@ -75,3 +75,30 @@ div.course_info > h4 {
   color: #666666;
   font-weight: 300;
 }
+
+@media screen and (max-device-width:700px) {
+
+  body {
+    font-size: 3vw;
+    background: linear-gradient(#c9e5ff, #eee7ff, #c9e5ff);
+    background-size: 100% 100%;
+  }
+
+  div.title > h1 {
+    text-indent: 50px;
+    font-size: 300%;
+  }
+
+  div.title > h2 {
+    text-indent: -50px;
+    color: #666666;
+    font-weight: 300;
+  }
+
+  div.splashpage {
+    height: 100%;
+    margin: auto;
+    position: relative;
+    top:50%;
+  }
+}
