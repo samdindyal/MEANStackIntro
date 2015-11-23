@@ -3,7 +3,7 @@ app.controller('SplashCtrl', function ($scope, $http) {
   $scope.authors = [
     {
       name: "Ji Qi",
-      profile: "#"
+      profile: "https://github.com/ogmiracle"
     },
     {
       name: "Rabih Talaba",
