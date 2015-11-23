@@ -29,6 +29,7 @@ footer {
   padding: 10px;
   padding-top: 75px;
   border: none;
+  z-index: -1;
 }
 
 div.btn-group > button.btn.btn-default.dropdown-toggle {
