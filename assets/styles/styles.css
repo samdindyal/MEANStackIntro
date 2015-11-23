@@ -25,6 +25,7 @@ footer {
   position: fixed;
   bottom: 0px;
   width: 100%;
+  background-color: none;
   background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.8));
   padding: 10px;
   padding-top: 50px;
@@ -182,4 +183,30 @@ div.wall {
 
 span#connected_users {
   color: #777777;
+}
+
+@media screen and (max-device-width:700px) {
+  body {
+      font-size: 4vw;
+      background: linear-gradient(#c9e5ff, #eee7ff, #c9e5ff);
+      background-repeat: repeat-y;
+  }
+
+  span#connected_users {
+    display: none;
+  }
+
+  * {
+    box-shadow: none;
+    width: 100%;
+  }
+
+  div.wall {
+    box-shadow: none;
+    position: inline;
+
+    margin-top: 25px;
+    bottom: 0px;
+
+  }
 }
