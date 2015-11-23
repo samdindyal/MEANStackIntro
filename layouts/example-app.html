@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script>
   </head>
-  <body ng-app='app' ng-controller="Ctrl">
+  <body ng-app='app'>
     <header>
       <div class="btn-group">
         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
@@ -35,7 +35,7 @@
               <button ng-click="writeToWall()" id="add_post" class="btn btn-default">Add Post</button>
         </div>
         </form>
-      <div class="wall">
+      <div class="wall" ng-controller="WallCtrl">
         <ul class="list-group">
           <li ng-repeat="message in messages | orderBy: '-date'" class="list-group-item">
             <b>{{ message.name }}</b>: "{{ message.body }}"</span>

@@ -1,9 +1,7 @@
 var app = angular.module('app', []);
 var socket = io();
 
-app.controller('Ctrl', function ($scope, MessagesSvc) {
-
-  $scope.connectedUsers = 1 + " user connected.";
+app.controller('WallCtrl', function ($scope, MessagesSvc) {
 
   $scope.writeToWall = function () {
     if ($scope.postBody) {
