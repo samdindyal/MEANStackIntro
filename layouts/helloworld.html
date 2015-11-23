@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/styles/styles.css" charset="utf-8">
   </head>
   <body>
-    <header class="long">
+    <header>
       <div class="btn-group">
         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
           Hello World
@@ -83,16 +83,16 @@
           Now that we have a page to serve, let's serve it. Create a file called <code>server.js</code> in the root directory of your project folder and add the following:
         </p>
         <pre class="prettyprint lang-js">
-    var express = require('express');
-    var app = express();
+   var express = require('express');
+   var app = express();
 
-    app.get('/', function(req, res){
-      res.sendFile(__dirname + '/layouts/page.html');
-    });
+   app.get('/', function(req, res){
+     res.sendFile(__dirname + '/layouts/page.html');
+   });
 
-    app.listen(3000, function() {
-      console.log('Listening on port: 3000');
-    });
+   app.listen(3000, function() {
+     console.log('Listening on port: 3000');
+   });
 </pre>
         <p>
           With this written we can now access the page we just creating by running <code>server.js</code>:
@@ -127,7 +127,7 @@
         Now that we've got all the files we need, we just need to serve the <code>assets</code> folder as a static asset. We can do that by adding the following into <code>server.js</code>:
       </p>
       <pre class="prettyprint lang-js">
-app.use(express.static(__dirname + '/assets'));</pre>
+  app.use(express.static(__dirname + '/assets'));</pre>
       <p>
         Now that that's done, restart your node server and try to access your page again from <code><a href="http://localhost:3000">http://localhost:3000</a></code>.
       </p>
