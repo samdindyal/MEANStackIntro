@@ -3,6 +3,8 @@ var socket = io();
 
 app.controller('Ctrl', function ($scope, MessagesSvc) {
 
+  $scope.connectedUsers = 1 + " user connected.";
+
   $scope.writeToWall = function () {
     if ($scope.postBody) {
       MessagesSvc.create({
@@ -10,16 +12,18 @@ app.controller('Ctrl', function ($scope, MessagesSvc) {
         body: $scope.postBody
       }).success(function(message){
         $scope.messages.unshift(message);
-
         socket.emit('new message', $scope.username + ": " + $scope.postBody);
-
         $scope.postBody = null;
       });
     }
   }
 
+  socket.on('refresh usercount', function(connectedUsers){
+      $scope.connectedUsers = connectedUsers + ' user' + ((connectedUsers != 1) ? 's' : '') + ' connected.';
+   });
+
   socket.on('refresh', function(connectedUsers){
-      $scope.connectedUsers = connectedUsers + "";
+      $scope.connectedUsers = connectedUsers + ' user' + ((connectedUsers != 1) ? 's' : '') + ' connected.';
       MessagesSvc.fetch().success(function (messages){
         $scope.messages = messages;
       });
