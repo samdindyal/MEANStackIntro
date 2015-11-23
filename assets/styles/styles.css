@@ -107,12 +107,12 @@ img.logo {
   max-height: 150px;
   display: inline;
   padding: 15px;
+  border-radius: 10px;
   transition: 0.5s;
 }
 
 img.logo:hover {
   background-color: rgba(204, 188, 241, 0.75);
-  border-radius: 10px;
 }
 
 img.logo:active {
