@@ -27,7 +27,7 @@ io.on('connection', function(socket){
     console.log('user disconnected');
   });
 
-  // socket.on('new message', function(msg){
-  //   io.emit('refresh', msg);
-  // });
+  socket.on('new message', function(msg){
+    io.emit('refresh', msg);
+  });
 });
