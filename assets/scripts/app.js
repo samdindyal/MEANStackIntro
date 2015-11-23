@@ -19,8 +19,7 @@ app.controller('WallCtrl', function ($scope, MessagesSvc) {
   }
 
   socket.on('refresh', function(connectedUsers){
-      $scope.connectedUsers = connectedUsers;
-      console.log(connectedUsers);
+      $scope.connectedUsers = connectedUsers + "";
       MessagesSvc.fetch().success(function (messages){
         $scope.messages = messages;
       });
