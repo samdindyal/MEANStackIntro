@@ -64,7 +64,7 @@ div.names > a > h3 {
 }
 
 div.names > a > h3:hover {
-  color: #9469ff;
+  color: rgb(173, 144, 240);
 }
 
 div.names > a {
