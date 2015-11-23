@@ -18,12 +18,12 @@ app.controller('Ctrl', function ($scope, MessagesSvc) {
     }
   }
 
-  socket.on('refresh usercount', function(connectedUsers){
-      $scope.connectedUsers = connectedUsers + ' user' + ((connectedUsers != 1) ? 's' : '') + ' connected.';
+  socket.on('usercount', function(connectedUsers){
+      $scope.connectedUsers = connectedUsers + ' user' + ((connectedUsers != 1) ? 's' : '') + ' connected';
    });
 
   socket.on('refresh', function(connectedUsers){
-      $scope.connectedUsers = connectedUsers + ' user' + ((connectedUsers != 1) ? 's' : '') + ' connected.';
+      $scope.connectedUsers = connectedUsers + ' user' + ((connectedUsers != 1) ? 's' : '') + ' connected';
       MessagesSvc.fetch().success(function (messages){
         $scope.messages = messages;
       });
