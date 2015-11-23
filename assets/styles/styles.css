@@ -29,7 +29,6 @@ footer {
   padding: 10px;
   padding-top: 75px;
   border: none;
-  z-index: -1;
 }
 
 div.btn-group > button.btn.btn-default.dropdown-toggle {
@@ -176,5 +175,5 @@ div.wall {
   overflow: scroll;
   position: absolute;
   margin: auto;
-  top: 400px; bottom: 25px; left: 0px; right: 0px;
+  top: 400px; bottom: 40px; left: 0px; right: 0px;
 }
