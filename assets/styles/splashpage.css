@@ -45,12 +45,12 @@ img.mean_logo {
   display: inline;
   width: 90%;
   max-width: 700px;
+  border-radius: 10px;
   transition: 0.5s;
 }
 
 img.mean_logo:hover {
   background-color: rgba(204, 188, 241, 0.75);
-  border-radius: 10px;
 }
 
 img.mean_logo:active {
