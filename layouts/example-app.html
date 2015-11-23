@@ -26,7 +26,7 @@
         </ul>
       </div>
     </header>
-    <div class="container example_app">
+    <div class="container example_app" ng-controller="WallCtrl">
       <h1>Write on our wall!</h1>
         <form role="form">
           <div class="form-group">
@@ -35,7 +35,7 @@
               <button ng-click="writeToWall()" id="add_post" class="btn btn-default">Add Post</button>
         </div>
         </form>
-      <div class="wall" ng-controller="WallCtrl">
+      <div class="wall">
         <ul class="list-group">
           <li ng-repeat="message in messages | orderBy: '-date'" class="list-group-item">
             <b>{{ message.name }}</b>: "{{ message.body }}"</span>
