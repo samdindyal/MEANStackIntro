@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" title="Bootstrap" charset="utf-8">
     <link rel="stylesheet" href="/styles/styles.css" charset="utf-8">
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script>
   </head>
   <body>
     <header class="long">
@@ -28,7 +26,33 @@
       </div>
     </header>
     <div class="container">
+      <div class="intro setup-text">
+        In order to use the MEAN Stack, you need to have two things installed:<br><br>
+        <ul>
+          <li>Node.js - <a href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
+          <li>MongoDB - <a href="https://www.mongodb.org">https://www.mongodb.org</a></li>
+        </ul>
+      </div>
+      <div class="setup-text installing">
+        These can easily be found on their respective websites for any major platform. Node.js has an installer while MongoDB requres some terminal work. Below is a screenshot of what the installer on Mac OS X looks like.<br>
+        <img src="img/nodeinstaller.png" alt="Installing Node on Mac OS X" /><br>
+        On Mac OS X, MongoDB can be installed via <a href="http://brew.sh">Homebrew</a>:<br><br>
+        <pre class="prettyprint lang-shell">
+   $ brew install mongodb</pre>
 
+        <p>
+          The instructions for installing MongoDB on other platforms can be found in the link below:<br><br>
+          <a href="https://www.mongodb.org/downloads#production">https://www.mongodb.org/downloads#production</a>
+        </p>
+      </div><br>
+      <div class="setup-text how-to-run">
+        Once Node.js is installed, the syntax for running your Node.js program is as follows:<br><br>
+        <pre class="prettyprint lang-shell">
+   $ node script.js</pre>
+      </div>
     </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
   </body>
 </html>
