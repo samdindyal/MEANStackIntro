@@ -194,7 +194,7 @@ div.setup-text {
   padding-bottom: 15px;
 }
 
-img {
+img:not(.logo) {
 
   width: 75%;
   max-width: 100%;
