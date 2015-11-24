@@ -18,7 +18,7 @@ app.controller('WallCtrl', function ($scope, MessagesSvc) {
         $scope.messages.unshift(message);
         socket.emit('new message', $scope.username + ": " + $scope.postBody);
         $scope.postBody = null;
-      }).failure(function(message) {
+      }).error(function(message) {
         $('button#add_post').removeClass('inactive');
         $('button#add_post').prop("disabled",false);
       });
