@@ -294,9 +294,9 @@ a.full_link {
     font-size: 2.5vw;
   }
 
-  /*span#connected_users {
+  span#connected_users {
     display: none;
-  }*/
+  }
 
   div.container:not(.example_app) {
     background-color: red;
@@ -318,7 +318,7 @@ a.full_link {
     position: relative;
     overflow: scroll;
     margin: auto;
-    top: 0px; bottom: 100px; left: 0px; right: 0px;
+    top: 0px; bottom: 0px; left: 0px; right: 0px;
     max-height: 96vw;
   }
 
