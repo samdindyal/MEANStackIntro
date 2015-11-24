@@ -322,7 +322,7 @@ a.full_link {
   }
 
   div.contributions {
-    width: 100%;
+    width: auto;
     height: 46vw;
   }
 }
