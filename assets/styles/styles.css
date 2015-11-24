@@ -325,6 +325,6 @@ a.full_link {
     width: auto;
     height: auto;
     margin: 10px auto;
-
+    box-shadow: 0 0 0 rgba(0,0,0,0);
   }
 }
