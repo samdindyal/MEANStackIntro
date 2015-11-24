@@ -319,7 +319,7 @@ a.full_link {
     overflow: scroll;
     margin: auto;
     top: 0px; bottom: 0px; left: 0px; right: 0px;
-    max-height: 48vw;
+    max-height: 64vw;
   }
 
   div.contributions {
