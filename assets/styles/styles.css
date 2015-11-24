@@ -323,6 +323,7 @@ a.full_link {
 
   div.contributions {
     width: auto;
-    height: 46vw;
+    height: auto;
+    margin: auto;
   }
 }
