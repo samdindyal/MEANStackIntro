@@ -26,8 +26,55 @@
       </div>
     </header>
     <div class="container">
+      <p>
+        In our experience writing this web app, we have noted a few things.
+      </p>
+      <div class="experience learningcurve">
+        <p>
+          <h2>The Learning Curve</h2>
+          Because the MEAN Stack is predominantly JavaScript, with a little HTML and CSS here and there,
+          the learning curve was not nearly as steep because there was only one language used for the server and client sides.
+          Along with that, JavaScript is a widely supporting language with a huge community making it easy to find support online and,
+          in our experience, JavaScript is a relatively easy language to learn.
+        </p>
+      </div>
+      <div class="experience callbacks">
+        <h2>Callbacks</h2>
+        <p>
+          Unlike a lot of event driven programming, <code>node.js</code>, which handles running the web server for a MEAN Stack web app, runs on callbacks.
+          With callbacks, a <code>functionA()</code> is passed to <code>functionB()</code>. <code>functionA()</code> will call <code>functionB()</code> after it has finished
+          executing. This is different to <code>AngularJS</code> which uses promises instead, where functions are chained onto another. Though some programmers prefer to use promises,
+          call backs are substantially more efficient. While writing this app, we found it somewhat
+          strange switching between callbacks on the server side with <code>node.js</code> and promises on the client side, <code>AngularJS</code>.
+        </p>
+      </div>
+      <div class="experience portsandheroku">
+        <h1>Heroku and Ports</h1>
+        <p>
+          Initially when we deployed our web app to Heroku, it kept crashing out. We were stumped as to why
+          our app wouldn't run since it did perfectly locally. The problem we had was a confliction between
+          Heroku and the static port we defined in our code for our app. When Heroku runs an app, it chooses
+          a port and runs it there. The port we specified was used, but Heroku didn't know that and it waited
+          until there was a timeout. We fixed this by using <code class="prettyprint lang-js"> process.env.PORT || 3000</code>
+          as our <code class="prettyprint lang-js">code</code> variable instead. <code class="prettyprint lang-js">process.env.PORT</code> is a Heroku environmental variable
+          container the port of which Heroku is using to run an app. The <code class="prettyprint lang-js">||</code> operator
+          guarantees that a port is defined by providing a backup should the environmental variable be unaccessible, <code class="prettyprint lang-js">3000</code>.
+          The <code class="prettyprint lang-js">port</code> variable is then passed into the <code class="prettyprint lang-js">.listen()</code> method
+          in <code class="prettyprint lang-js">express.js</code> to start the web server. Our web app started working immediately after
+          we implemented this change.
+        </p>
+      </div>
+      <div class="experience conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          In conclusion, we believe that the MEAN Stack is great for building dynamic apps with scalability.
+          It eliminates the need for another server side language and it has an enormous community and libraries which are still quickly
+          growing.
+        </p>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
   </body>
 </html>

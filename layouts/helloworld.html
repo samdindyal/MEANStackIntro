@@ -98,7 +98,7 @@
    });
 </pre>
         <p>
-          With this written we can now access the page we just creating by running <code>server.js</code>:
+          With this written we can now access the page we just creating by running <code>server.js</code> :
           <pre class="prettyprint lang-shell">
     $ node server.js</pre>
         </p>
@@ -109,7 +109,7 @@
       <div class="Serving Static Assets">
         <h2>Serving Static Assets</h2>
         <p>
-          You may have noticed that we included a stylesheet that we didn't use yet. When running your website with <code>Node.js</code> and <code>Express.js</code>, you need to selectively and statically serve what you need. In order to do that, we are going to serve a folder containing all of our static assets.
+          You may have noticed that we included a stylesheet that we didn't use yet. When running your website with <code>node.js</code> and <code>express.js</code> , you need to selectively and statically serve what you need. In order to do that, we are going to serve a folder containing all of our static assets.
         </p>
         <p>
           The first step we need to take from here is to create a folder, <code>assets</code> in the root directory of our project folder. Once we've done that, we need to create <code>assets/styles.css</code>.
@@ -150,7 +150,7 @@
   }</pre>
 
       <p>
-        Now that we've got all the files we need, we just need to serve the <code>assets</code> folder as a static asset. We can do that by adding the following into <code>server.js</code>:
+        Now that we've got all the files we need, we just need to serve the <code>assets</code> folder as a static asset. We can do that by adding the following into <code>server.js</code> :
       </p>
       <pre class="prettyprint lang-js">
   app.use(express.static(__dirname + '/assets'));</pre>
