@@ -324,6 +324,7 @@ a.full_link {
   div.contributions {
     width: auto;
     height: auto;
-    margin: auto;
+    margin: 10px auto;
+
   }
 }
