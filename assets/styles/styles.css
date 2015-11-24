@@ -157,13 +157,18 @@ textarea {
   transition: 0.5s;
 }
 
-#add_post.btn.btn-default:hover {
+#add_post.btn.btn-default:not(.inactive):hover {
   background-color: rgba(137, 193, 246, 0.7);
 }
 
-#add_post.btn.btn-default:active {
+#add_post.btn.btn-default:not(.inactive):active {
   background-color: rgba(179, 186, 247, 0.7);
   box-shadow: 0px 0px 15px rgba(199, 179, 247, 0.7);
+}
+
+#add_post.btn.btn-default.inactive {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #999999;
 }
 
 span.time {

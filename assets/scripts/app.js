@@ -6,6 +6,8 @@ app.controller('WallCtrl', function ($scope, MessagesSvc) {
   $scope.connectedUsers = 1 + " user connected.";
 
   $scope.writeToWall = function () {
+    $('button#add_post').addClass('inactive');
+    $('button#add_post').prop("disabled",true);
     if ($scope.postBody) {
       MessagesSvc.create({
         name: $scope.username,
@@ -14,6 +16,8 @@ app.controller('WallCtrl', function ($scope, MessagesSvc) {
         $scope.messages.unshift(message);
         socket.emit('new message', $scope.username + ": " + $scope.postBody);
         $scope.postBody = null;
+        $('button#add_post').removeClass('inactive');
+        $('button#add_post').prop("disabled",false);
       });
     }
   }
