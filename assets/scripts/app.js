@@ -1,6 +1,12 @@
 var app = angular.module('app', []);
 var socket = io();
 
+$('textarea#postBodyInput').keypress(function(e) {
+  var key = e.which;
+  if(key == 13)  // the enter key code
+    $('button#add_post').click();
+});
+
 app.controller('WallCtrl', function ($scope, MessagesSvc) {
 
   $scope.connectedUsers = 1 + " user connected.";
