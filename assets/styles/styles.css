@@ -59,6 +59,10 @@ a:hover {
   text-decoration: none;
 }
 
+a.sketch:hover {
+  color: #555555;
+}
+
 ul.dropdown-menu {
   width: auto;
   text-align: center;
@@ -219,24 +223,53 @@ pre {
   text-align: left;
 }
 
-div.simpleapp, div.deploy, div.setup, div.experience {
+div.simpleapp, div.deploy, div.setup, div.experience, div.contributions {
   padding-bottom: 15px;
   max-width: 100%;
   overflow-x: auto;
 }
 
+div.contributions {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  width: 40%;
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+  transition: 0.5s;
+  display: inline-block;
+
+}
+
+div.contributions:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.sketches > a {
+  display: inline;
+}
+
+div.sketches {
+  text-align: center;
+}
+
+img.sketch {
+  width: auto;
+  height: auto;
+}
+
 xmp, pre.prettyprint.prettyprinted {
   border: none;
   text-align: left;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.25);
   border-radius: 5px;
-  box-shadow: 0px 0px 0px (255, 255, 255, 0.5);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
   word-wrap: normal;
   overflow-x: scroll;
 }
 
 code {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.4);
   color: #555555;
 }
 
