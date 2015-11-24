@@ -219,7 +219,7 @@ pre {
   text-align: left;
 }
 
-div.simpleapp, div.deploy, div.setup {
+div.simpleapp, div.deploy, div.setup, div.experience {
   padding-bottom: 15px;
   max-width: 100%;
   overflow-x: auto;
