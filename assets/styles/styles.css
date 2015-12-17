@@ -84,15 +84,16 @@ ul.dropdown-menu > li > a {
   transition: 0.5s;
 }
 ul.dropdown-menu > li > a:hover {
-  background-color: rgba(143, 169, 219, 0.75);
+  background-color: rgba(66, 103, 173, 0.75);
+  color: #859eeb;
 }
 
 ul.dropdown-menu > li > a.current {
-  color: rgb(108, 114, 191);
+  color: rgb(129, 136, 228);
 }
 
 ul.dropdown-menu > li > a.current:hover {
-  color: #7571c3;
+  color: #b0abe9;
 }
 
 div.container:not(.example_app) {
