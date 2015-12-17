@@ -55,12 +55,12 @@
           our app wouldn't run since it did perfectly locally. The problem we had was a confliction between
           Heroku and the static port we defined in our code for our app. When Heroku runs an app, it chooses
           a port and runs it there. The port we specified was used, but Heroku didn't know that and it waited
-          until there was a timeout. We fixed this by using <code class="prettyprint lang-js"> process.env.PORT || 3000</code>
-          as our <code class="prettyprint lang-js">code</code> variable instead. <code class="prettyprint lang-js">process.env.PORT</code> is a Heroku environmental variable
-          container the port of which Heroku is using to run an app. The <code class="prettyprint lang-js">||</code> operator
-          guarantees that a port is defined by providing a backup should the environmental variable be unaccessible, <code class="prettyprint lang-js">3000</code>.
-          The <code class="prettyprint lang-js">port</code> variable is then passed into the <code class="prettyprint lang-js">.listen()</code> method
-          in <code class="prettyprint lang-js">express.js</code> to start the web server. Our web app started working immediately after
+          until there was a timeout. We fixed this by using <code class="prettyprint theme-peacocks-in-space lang-js"> process.env.PORT || 3000</code>
+          as our <code class="prettyprint theme-peacocks-in-space lang-js">code</code> variable instead. <code class="prettyprint theme-peacocks-in-space lang-js">process.env.PORT</code> is a Heroku environmental variable
+          container the port of which Heroku is using to run an app. The <code class="prettyprint theme-peacocks-in-space lang-js">||</code> operator
+          guarantees that a port is defined by providing a backup should the environmental variable be unaccessible, <code class="prettyprint theme-peacocks-in-space lang-js">3000</code>.
+          The <code class="prettyprint theme-peacocks-in-space lang-js">port</code> variable is then passed into the <code class="prettyprint theme-peacocks-in-space lang-js">.listen()</code> method
+          in <code class="prettyprint theme-peacocks-in-space lang-js">express.js</code> to start the web server. Our web app started working immediately after
           we implemented this change.
         </p>
       </div>

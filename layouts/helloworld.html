@@ -31,7 +31,7 @@
         <p>
           Now that you've got everything installed, let's make your first MEAN Stack application.
           The first thing we need to do is set up our project folder. Once we have created it, we initialize our app with:
-          <pre class="prettyprint lang-shell">
+          <pre class="prettyprint theme-peacocks-in-space lang-shell">
   $ npm init --yes</pre>
         </p>
         The previous command initializes our application with a <code>json</code> file called <code>package.json</code> in the root directory of our project. This file is responsible for keeping track of the project information as well as its dependencies.
@@ -44,12 +44,12 @@
         </p>
         <p>
           The command for installing <code>express</code> locally is as follows:<br>
-          <pre class="prettyprint lang-shell">
+          <pre class="prettyprint theme-peacocks-in-space lang-shell theme-peacocks-in-space">
   $ npm install --save express</pre>
         </p>
         <p>
           After express has been installed, the dependency will be added to your <code>package.json</code> file.
-          <pre class="prettyprint lang-json">
+          <pre class="prettyprint theme-peacocks-in-space lang-json">
    "dependencies": {
       "express": "^4.13.3"
     }</pre>
@@ -83,7 +83,7 @@
         <p>
           Now that we have a page to serve, let's serve it. Create a file called <code>server.js</code> in the root directory of your project folder and add the following:
         </p>
-        <pre class="prettyprint lang-js">
+        <pre class="prettyprint theme-peacocks-in-space lang-js">
    var express = require('express');
    var app = express();
 
@@ -99,7 +99,7 @@
 </pre>
         <p>
           With this written we can now access the page we just created by running <code>server.js</code> :
-          <pre class="prettyprint lang-shell">
+          <pre class="prettyprint theme-peacocks-in-space lang-shell">
   $ node server.js</pre>
         </p>
         <p>
@@ -117,7 +117,7 @@
         <p>
           Create the following style sheet and save it in <code>assets/styles.css</code>
         </p>
-        <pre class="prettyprint lang-css">
+        <pre class="prettyprint theme-peacocks-in-space lang-css">
   body, html {
       height: 100%;
     }
@@ -153,7 +153,7 @@
       <p>
         Now that we've got all the files we need, we just need to serve the <code>assets</code> folder as a static asset. We can do that by adding the following into <code>server.js</code> :
       </p>
-      <pre class="prettyprint lang-js">
+      <pre class="prettyprint theme-peacocks-in-space lang-js">
   app.use(express.static(__dirname + '/assets'));</pre>
       <p>
         Now that that's done, restart your node server and try to access your page again from <code><a href="http://localhost:3000">http://localhost:3000</a></code>.
