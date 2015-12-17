@@ -5,10 +5,10 @@ body, html {
 }
 
 body {
-  color: #333333;
+  color: #ffffff;
   text-align: center;
   background-color: #c9e5ff;
-  background: linear-gradient(#c9e5ff, #eee7ff);
+  background: linear-gradient(#3a87cf, #7268a2);
   font-family: "Open Sans";
 }
 
@@ -35,7 +35,7 @@ div.title > h1 {
 
 div.title > h2 {
   text-indent: -125px;
-  color: #666666;
+  color: #ffffff;
   font-weight: 300;
 }
 
@@ -46,25 +46,27 @@ img.mean_logo {
   width: 90%;
   max-width: 700px;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  background-color: rgba(150, 169, 205, 0.5);
   transition: 0.5s;
 }
 
 img.mean_logo:hover {
-  background-color: rgba(204, 188, 241, 0.75);
+  background-color: rgba(150,150,205, 0.5);
 }
 
 img.mean_logo:active {
-  background-color: #c9e5ff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.125);
 }
 
 div.names > a > h3 {
   line-height: 0.4em;
-  color: #444444;
+  color: #ffffff;
   transition: 0.5s;
 }
 
 div.names > a > h3:hover {
-  color: rgb(173, 144, 240);
+  color: rgb(150,150,205);
 }
 
 div.names > a {
@@ -72,7 +74,7 @@ div.names > a {
 }
 
 div.course_info > h4 {
-  color: #666666;
+  color: #ffffff;
   font-weight: 300;
 }
 
@@ -91,7 +93,7 @@ div.course_info > h4 {
 
   div.title > h2 {
     text-indent: -50px;
-    color: #666666;
+    color: #ffffff;
     font-weight: 300;
   }
 

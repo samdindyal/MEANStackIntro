@@ -5,16 +5,16 @@ body, html {
 }
 
 body {
-  color: #333333;
+  color: #ffffff;
   background-color: #c9e5ff;
-  background: linear-gradient(#c9e5ff, #eee7ff);
+  background: linear-gradient(#3a87cf, #7268a2);
   font-family: "Open Sans";
   text-align: center;
 }
 
 header {
   width: 100%;
-  background: linear-gradient(rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0));
+  background: linear-gradient(rgba(25, 25, 25, 0.7), rgba(25, 25, 25, 0));
   padding: 10px;
   padding-bottom: 50px;
   border: none;
@@ -25,7 +25,7 @@ footer {
   bottom: 0px;
   width: 100%;
   background-color: none;
-  background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.8));
+  background: linear-gradient(rgba(25, 25, 25, 0), rgba(25, 25, 25, 0.75));
   padding: 10px;
   padding-top: 50px;
   border: none;
@@ -33,6 +33,7 @@ footer {
 
 div.btn-group > button.btn.btn-default.dropdown-toggle {
   background-color: rgba(0,0,0,0);
+  color: #ffffff;
   border: none;
   font-size: 300%;
   transition: 0.5s;
@@ -46,12 +47,12 @@ button.btn.btn-default.dropdown-toggle:active
 div.btn-group > button.btn.btn-default.dropdown-toggle:hover,
 div.btn-group > button.btn.btn-default.dropdown-toggle[aria-expanded="true"]
 {
-    color: #7871c3;
+    color: #8caaf6;
 }
 
 a {
   transition: 0.5s;
-  color: #555555;
+  color: #ffffff;
 }
 
 a:hover {
@@ -60,7 +61,7 @@ a:hover {
 }
 
 a.sketch:hover {
-  color: #555555;
+  color: #ffffff;
 }
 
 ul.dropdown-menu {
@@ -73,30 +74,31 @@ ul.dropdown-menu {
   text-align: center;
   transform: translate(-50%, 0);
 
-  background-color: rgba(215, 232, 255, 0.95);
+  background-color: rgba(50, 50, 50, 0.90);
 }
 
 ul.dropdown-menu > li > a {
+  color: #ffffff;
   font-family: "Open Sans";
   font-weight: 300;
   transition: 0.5s;
 }
 ul.dropdown-menu > li > a:hover {
-  background-color: rgba(204, 188, 241, 0.75);
+  background-color: rgba(143, 169, 219, 0.75);
 }
 
 ul.dropdown-menu > li > a.current {
-  color: rgb(133, 108, 191);
+  color: rgb(108, 114, 191);
 }
 
 ul.dropdown-menu > li > a.current:hover {
-  color: #719bc3;
+  color: #7571c3;
 }
 
 div.container:not(.example_app) {
 
   padding: 15px;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(35, 35, 35, 0.5);
   border-radius: 10px;
   min-height: 42vw;
   overflow-y: scroll;
@@ -112,15 +114,17 @@ img.logo {
   display: inline;
   padding: 15px;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  background-color: rgba(150, 169, 205, 0.5);
   transition: 0.5s;
 }
 
 img.logo:hover {
-  background-color: rgba(204, 188, 241, 0.75);
+  background-color: rgba(150,150,205, 0.5);
 }
 
 img.logo:active {
-  background-color: #c9e5ff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.125);
 }
 
 p.description {
@@ -142,7 +146,8 @@ textarea {
 }
 
 .form-control {
-  background-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  background-color: rgba(50, 50, 50, 0.5);
   margin: 5px auto;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(0,0,0,0);
@@ -154,7 +159,7 @@ textarea {
 }
 
 #add_post.btn.btn-default {
-  background-color: rgba(199, 179, 247, 0.7);
+  background-color: rgba(141, 154, 199, 0.7);
   border-radius: 5px;
   border-color: rgba(0,0,0,0);
   box-shadow: 0px 0px 5px rgba(0,0,0, 0.1);
@@ -162,12 +167,12 @@ textarea {
 }
 
 #add_post.btn.btn-default:not(.inactive):hover {
-  background-color: rgba(137, 193, 246, 0.7);
+  background-color: rgba(168, 137, 246, 0.7);
 }
 
 #add_post.btn.btn-default:not(.inactive):active {
-  background-color: rgba(179, 186, 247, 0.7);
-  box-shadow: 0px 0px 15px rgba(199, 179, 247, 0.7);
+  background-color: rgba(168, 137, 246, 0.7);
+  box-shadow: 0px 0px 10px rgba(105, 42, 255, 0.5);
 }
 
 #add_post.btn.btn-default.inactive {
@@ -206,7 +211,7 @@ div.wall {
 }
 
 span#connected_users {
-  color: #777777;
+  color: #ffffff;
 }
 
 ul {
