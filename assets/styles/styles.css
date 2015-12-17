@@ -176,7 +176,7 @@ textarea {
 }
 
 #add_post.btn.btn-default.inactive {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(0, 0, 0, 0.25);
   color: #999999;
 }
 
@@ -188,14 +188,14 @@ span.time {
 }
 
 li.list-group-item {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(35, 35, 35, 0.5);
   border: none;
   border-radius: 5px;
   transition: 0.5s;
 }
 
 li.list-group-item:hover {
-  background-color: rgba(187, 220, 251, 0.7);
+  background-color: rgba(50, 50, 50, 0.5);
   color: rgb(133, 108, 191);
 }
 
