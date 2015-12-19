@@ -154,6 +154,11 @@ textarea {
   border: 1px solid rgba(0,0,0,0);
 }
 
+.form-control::-webkit-input-placeholder
+{
+  color: #dddddd;
+}
+
 .form-control:focus {
   box-shadow: 0px 0px 15px rgba(199, 179, 247, 0.75);
   border-color: rgba(199, 179, 247, 0.75);
