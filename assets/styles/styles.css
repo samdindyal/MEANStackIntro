@@ -164,6 +164,7 @@ textarea {
   border-radius: 5px;
   border-color: rgba(0,0,0,0);
   box-shadow: 0px 0px 5px rgba(0,0,0, 0.1);
+  color: #FFFFFF;
   transition: 0.5s;
 }
 
