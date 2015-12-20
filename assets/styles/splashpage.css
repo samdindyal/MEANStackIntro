@@ -82,8 +82,9 @@ div.course_info > h4 {
 
   body {
     font-size: 3vw;
-    background: linear-gradient(#c9e5ff, #eee7ff, #eee7ff, #c9e5ff);
-    background-size: 100% 100%;
+    background: linear-gradient(#3a87cf, #7268a2, #7268a2, #3a87cf);
+    background-size: 100% 200%;
+    background-repeat: repeat-y;
   }
 
   div.title > h1 {

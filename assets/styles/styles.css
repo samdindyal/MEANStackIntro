@@ -289,7 +289,8 @@ a.full_link {
 @media screen and (max-device-width:700px) {
   body {
       height: auto;
-      background: linear-gradient(#c9e5ff, #eee7ff, #eee7ff, #c9e5ff);
+      background: linear-gradient(#3a87cf, #7268a2, #7268a2, #3a87cf);
+      background-size: 100% 100%;
       background-repeat: repeat-y;
   }
 
