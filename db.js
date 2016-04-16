@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
-if (process.env.MONGOLAB_URI)
-  mongoose.connect(process.env.MONGOLAB_URI, function(err) {
+var mongo_uri = "" || process.env.MONGOLAB_URI;
+if (mongo_uri)
+  mongoose.connect(mongo_uri, function(err) {
     if (err)
       throw err;
     console.log('mongodb connected');
