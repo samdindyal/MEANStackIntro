@@ -1,6 +1,6 @@
 # An Introduction to the MEAN Stack
 
-This is a web app created with the MEAN Stack as an introduction to it as a term project for a course, CPS530, Web Systems Development, at Ryerson University. This web app provides a brief overview of the MEAN Stack along with an example web application and a hello world tutorial including its deployment to Heroku.
+This is a web app created with the MEAN Stack as an introduction to it as a term project for a course, CPS530, Web Systems Development, at Ryerson University. This web app includes a brief overview of the MEAN Stack along with an example web application and a hello world tutorial including its deployment to Heroku.
 
 This web app can be installed just like any other Node.js web application from the project's root:
 
